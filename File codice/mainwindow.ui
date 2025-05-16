@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Rubrica GUI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+	background-color: rgb(20,20,20);
+	border: 1px solid rgb(1,1,1);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1000</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1000</width>
+     <height>500</height>
+    </size>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_9">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="5,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <property name="leftMargin">
+         <number>15</number>
+        </property>
+        <property name="topMargin">
+         <number>15</number>
+        </property>
+        <property name="rightMargin">
+         <number>15</number>
+        </property>
+        <property name="bottomMargin">
+         <number>15</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift</family>
+            <pointsize>26</pointsize>
+           </font>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+	color: rgb(235, 235, 235);
+	margin-left: 20px;
+	margin-top: 20px;
+    margin-right: 10px
+}</string>
+          </property>
+          <property name="text">
+           <string>CONTATTI MEMORIZZATI:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="add">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>781</width>
+              <height>371</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <property name="spacing">
+              <number>6</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <item>
+                <widget class="QLineEdit" name="lineEdit">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: rgb(30, 30, 30); 
+    color: rgb(235, 235, 235);          
+    border: 1px solid black;    
+    border-radius: 10px;            
+    padding: 8px;                     
+    font-size: 16px;           
+    font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, sans-serif;
+}
+
+QLineEdit:hover {
+    border-color: rgb(100, 100, 100);
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Nome</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+	color: gold;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Nome non valido!</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QLineEdit" name="lineEdit_2">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: rgb(30, 30, 30); 
+    color: rgb(235, 235, 235);          
+    border: 1px solid black;    
+    border-radius: 10px;            
+    padding: 8px;                     
+    font-size: 16px;           
+    font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, sans-serif;
+}
+
+QLineEdit:hover {
+    border-color: rgb(100, 100, 100);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Numero di Telefono</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+	color: gold;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Numero non valido!</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QLineEdit" name="lineEdit_3">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: rgb(30, 30, 30); 
+    color: rgb(235, 235, 235);          
+    border: 1px solid black;    
+    border-radius: 10px;            
+    padding: 8px;                     
+    font-size: 16px;           
+    font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, sans-serif;
+}
+
+QLineEdit:hover {
+    border-color: rgb(100, 100, 100);
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Città</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+	color: gold;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Città non valida!</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QLineEdit" name="lineEdit_4">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: rgb(30, 30, 30); 
+    color: rgb(235, 235, 235);          
+    border: 1px solid black;   
+    border-radius: 10px;            
+    padding: 8px;                     
+    font-size: 16px;           
+    font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, sans-serif;
+}
+
+QLineEdit:hover {
+    border-color: rgb(100, 100, 100);
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Email</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+	color: gold;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Email non valida!</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0">
+               <item>
+                <widget class="QLineEdit" name="lineEdit_5">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: rgb(30, 30, 30); 
+    color: rgb(235, 235, 235);          
+    border: 1px solid black;    
+    border-radius: 10px;            
+    padding: 8px;                     
+    font-size: 16px;           
+    font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, sans-serif;
+}
+
+QLineEdit:hover {
+    border-color: rgb(100, 100, 100);
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Età</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{
+	color: gold;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Età non valida!</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="list">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <widget class="QTreeWidget" name="treeWidget">
+            <property name="geometry">
+             <rect>
+              <x>1</x>
+              <y>0</y>
+              <width>781</width>
+              <height>371</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTreeWidget{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+	background-color: rgb(30,30,30);
+	border: 1px solid rgb(1,1,1);
+	padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+	padding-top: 30px;
+	font-size: 20px;
+	color: rgb(235, 235, 235);
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #f5f5f5;
+    width: 8px;
+    margin: 2px 2px 2px 2px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #888;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #555; 
+}
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical {
+    background: none;
+    border: none;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: #f5f5f5;
+    height: 8px;
+    margin: 2px 2px 2px 2px;
+    border-radius: 4px;
+}
+
+QScrollBar:horizontal {
+    height: 0px;
+    background: transparent;
+    border: none;
+}
+
+
+
+
+</string>
+            </property>
+            <column>
+             <property name="text">
+              <string notr="true">1</string>
+             </property>
+            </column>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QStackedWidget" name="stackedWidget_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="normal">
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>161</width>
+              <height>481</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>15</number>
+             </property>
+             <property name="topMargin">
+              <number>15</number>
+             </property>
+             <property name="rightMargin">
+              <number>15</number>
+             </property>
+             <property name="bottomMargin">
+              <number>15</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="btnSvuota">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"> QPushButton {
+        background-color: #CF4A4A;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 20%;
+        padding: 10px;
+}
+QPushButton:hover {
+        background-color: #A04545;
+}
+QPushButton:pressed {
+        background-color: #8E3838;
+}</string>
+               </property>
+               <property name="text">
+                <string>Svuota</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnAggiungi">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"> QPushButton {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 20%;
+        padding: 10px;
+}
+QPushButton:hover {
+        background-color: #45a049;
+}
+QPushButton:pressed {
+        background-color: #388E3C;
+}</string>
+               </property>
+               <property name="text">
+                <string>Aggiungi</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnRimuovi">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"> QPushButton {
+        background-color: #CF4A4A;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 20%;
+        padding: 10px;
+}
+QPushButton:hover {
+        background-color: #A04545;
+}
+QPushButton:pressed {
+        background-color: #8E3838;
+}</string>
+               </property>
+               <property name="text">
+                <string>Rimuovi</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnModifica">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"> QPushButton {
+        background-color: #4A6FCF;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 20%;
+        padding: 10px;
+}
+QPushButton:hover {
+        background-color: #456AA0;
+}
+QPushButton:pressed {
+        background-color: #385C8E;
+}</string>
+               </property>
+               <property name="text">
+                <string>Modifica</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnEspandi">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"> QPushButton {
+        background-color: #eb6b34;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 20%;
+        padding: 10px;
+}
+QPushButton:hover {
+        background-color: #d65f2f;
+}
+QPushButton:pressed {
+        background-color: #bf5329;
+}</string>
+               </property>
+               <property name="text">
+                <string>Espandi</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="adds">
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>161</width>
+              <height>481</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_11">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>15</number>
+             </property>
+             <property name="topMargin">
+              <number>15</number>
+             </property>
+             <property name="rightMargin">
+              <number>15</number>
+             </property>
+             <property name="bottomMargin">
+              <number>15</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="newGoBack">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"> QPushButton {
+        background-color: #CF4A4A;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 20%;
+        padding: 10px;
+}
+QPushButton:hover {
+        background-color: #A04545;
+}
+QPushButton:pressed {
+        background-color: #8E3838;
+}</string>
+               </property>
+               <property name="text">
+                <string>Torna Indietro</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="newAdd">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"> QPushButton {
+        background-color: #eb6b34;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 20%;
+        padding: 10px;
+}
+QPushButton:hover {
+        background-color: #d65f2f;
+}
+QPushButton:pressed {
+        background-color: #bf5329;
+}</string>
+               </property>
+               <property name="text">
+                <string>Aggiungi</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
